@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -93,9 +93,9 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -140,7 +140,7 @@
     
   
 
-  <div class="container sidebar-position-left 
+  <div class="container sidebar-position-right 
   page-home">
     <div class="headband"></div>
 
@@ -354,18 +354,18 @@
       
         
           
-            <p>运行Python代码时，在编译时包被正确初始化，也能够被IDE识别，但却在运行时出现错误：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ImportError: No module named <span class="string">''</span>some_package<span class="string">''</span></span><br></pre></td></tr></table></figure>
+          运行Python代码时，在编译时包被正确初始化，也能够被IDE识别，但却在运行时出现错误：
+1ImportError: No module named ''some_package''
 
-<p>这时有可能是因为 Python 没有正确将你的包作为 site-packages 导入的原因，解决方法是找到你的site-packages 目录，macOS 下安装的 anaconda 3 目录为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/你的用户名/anaconda3/lib/python3.7/site-packages</span><br></pre></td></tr></table></figure>
-
-<p>在其中新建一个 .pth 文件，比如 my_path.pth ，例如在：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/lee/Library/CloudStorage/iCloudDrive/Documents/PyCharmProjects/Algorithms/</span><br></pre></td></tr></table></figure>
-
-<p>这个项目下存在一个包不能被Python识别，编辑文件内容为你的项目的根目录的位置并保存即可。</p>
-
-          
+这时有可能是因为 Python 没有正确将你的包作为 site-packages 导入的原因，解决方法是找到你的
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/25/解决Python运行出现ImportError-No-module-named-some-packages错误的问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -517,265 +517,16 @@
       
         
           
-            <p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面，Markdown文件的后缀名便是“.md”</p>
-<h2 id="MarkDown的功能演示"><a href="#MarkDown的功能演示" class="headerlink" title="MarkDown的功能演示"></a>MarkDown的功能演示</h2><h1 id="标题H1"><a href="#标题H1" class="headerlink" title="标题H1"></a>标题H1</h1><h2 id="标题H2"><a href="#标题H2" class="headerlink" title="标题H2"></a>标题H2</h2><h3 id="标题H3"><a href="#标题H3" class="headerlink" title="标题H3"></a>标题H3</h3><h4 id="标题H4"><a href="#标题H4" class="headerlink" title="标题H4"></a>标题H4</h4><h5 id="标题H5"><a href="#标题H5" class="headerlink" title="标题H5"></a>标题H5</h5><h6 id="标题H5-1"><a href="#标题H5-1" class="headerlink" title="标题H5"></a>标题H5</h6><h3 id="字符效果和横线等"><a href="#字符效果和横线等" class="headerlink" title="字符效果和横线等"></a>字符效果和横线等</h3><hr>
-<p><del>删除线</del> <s>删除线（开启识别HTML标签时）</s></p>
-<p><em>斜体字</em>      <em>斜体字</em></p>
-<p><strong>粗体</strong>  <strong>粗体</strong></p>
-<p><strong><em>粗斜体</em></strong> <strong><em>粗斜体</em></strong></p>
-<p>上标：X<sub>2</sub>，下标：O<sup>2</sup></p>
-<p><strong>缩写(同HTML的abbr标签)</strong></p>
-<blockquote>
-<p>即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启</p>
-</blockquote>
-<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
-<h3 id="引用-Blockquotes"><a href="#引用-Blockquotes" class="headerlink" title="引用 Blockquotes"></a>引用 Blockquotes</h3><blockquote>
-<p>引用文本 Blockquotes</p>
-</blockquote>
-<p>引用的行内混合 Blockquotes</p>
-<blockquote>
-<p>引用：如果想要插入空白换行<code>即&lt;br /&gt;标签</code>，在插入处先键入两个以上的空格然后回车即可，<a href="https://zer0xpoint.github.io/" target="_blank" rel="noopener">普通链接</a>。</p>
-</blockquote>
-<h3 id="锚点与链接-Links"><a href="#锚点与链接-Links" class="headerlink" title="锚点与链接 Links"></a>锚点与链接 Links</h3><p><a href="https://zer0xpoint.github.io/" target="_blank" rel="noopener">普通链接</a><br><a href="https://zer0xpoint.github.io/" title="普通链接带标题" target="_blank" rel="noopener">普通链接带标题</a><br>直接链接：<a href="https://zer0xpoint.github.io" target="_blank" rel="noopener">https://zer0xpoint.github.io</a><br>[锚点链接][anchor-id]<br>[anchor-id]: <a href="https://zer0xpoint.github.io/" target="_blank" rel="noopener">https://zer0xpoint.github.io/</a><br><a href="mailto:test.test@gmail.com" target="_blank" rel="noopener">mailto:test.test@gmail.com</a><br>GFM a-tail link @zer0xpoint<br>邮箱地址自动链接 <a href="mailto:test.test@gmail.com" target="_blank" rel="noopener">test.test@gmail.com</a>  <a href="mailto:www@vip.qq.com" target="_blank" rel="noopener">www@vip.qq.com</a></p>
-<blockquote>
-<p>@zer0xpoint</p>
-</blockquote>
-<h3 id="多语言代码高亮-Codes"><a href="#多语言代码高亮-Codes" class="headerlink" title="多语言代码高亮 Codes"></a>多语言代码高亮 Codes</h3><h4 id="行内代码-Inline-code"><a href="#行内代码-Inline-code" class="headerlink" title="行内代码 Inline code"></a>行内代码 Inline code</h4><p>执行命令：<code>npm install marked</code></p>
-<h4 id="缩进风格"><a href="#缩进风格" class="headerlink" title="缩进风格"></a>缩进风格</h4><p>即缩进四个空格，也做为实现类似 <code>&lt;pre&gt;</code> 预格式化文本 ( Preformatted Text ) 的功能。</p>
-<pre><code>&lt;?php
-    echo &quot;Hello world!&quot;;
-?&gt;</code></pre><p>预格式化文本：</p>
-<pre><code>| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |</code></pre><h4 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"Hello world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="HTML-代码-HTML-codes"><a href="#HTML-代码-HTML-codes" class="headerlink" title="HTML 代码 HTML codes"></a>HTML 代码 HTML codes</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mate</span> <span class="attr">charest</span>=<span class="string">"utf-8"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"Editor.md, Markdown, Editor"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello world!<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line">            body&#123;font-size:14px;color:#444;font-family: Arial;background:#fff;&#125;</span><br><span class="line">            ul&#123;list-style: none;&#125;</span><br><span class="line">            img&#123;border:none;vertical-align: middle;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"text-xxl"</span>&gt;</span>Hello world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-green"</span>&gt;</span>Plain text<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="图片-Images"><a href="#图片-Images" class="headerlink" title="图片 Images"></a>图片 Images</h3><p>图片加链接 (Image + Link)</p>
-<p>P.S. 在使用Hexo时，若使用图片较多，可以配置Hexo生成文章同名目录，用相对路径来表明图片链接。</p>
-<p>文章的目录可以通过配置_config.yml将其中的post_asset_folder选项改为true来生成。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post<span class="emphasis">_asset_</span>folder: true</span><br></pre></td></tr></table></figure>
-
-<p>之后执行命令$ hexo new post_name（你自己文章的名字），在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](MarkDown-Syntax-Demo-pic001.JPG)</span><br></pre></td></tr></table></figure>
-
-<p><img src="MarkDown-Syntax-Demo-pic001.JPG" alt></p>
-<p>上述是markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。</p>
-<p>如果希望图片在文章和首页中同时显示，可以使用标签插件语法。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img image.jpg This is an image %&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Try Ur Best</p>
-</blockquote>
-<hr>
-<h3 id="列表-Lists"><a href="#列表-Lists" class="headerlink" title="列表 Lists"></a>列表 Lists</h3><h4 id="无序列表（减号）Unordered-Lists"><a href="#无序列表（减号）Unordered-Lists" class="headerlink" title="无序列表（减号）Unordered Lists (-)"></a>无序列表（减号）Unordered Lists (-)</h4><ul>
-<li>列表一</li>
-<li>列表二</li>
-<li>列表三</li>
-</ul>
-<h4 id="无序列表（星号）Unordered-Lists"><a href="#无序列表（星号）Unordered-Lists" class="headerlink" title="无序列表（星号）Unordered Lists (*)"></a>无序列表（星号）Unordered Lists (*)</h4><ul>
-<li>列表一</li>
-<li>列表二</li>
-<li>列表三</li>
-</ul>
-<h4 id="无序列表（加号和嵌套）Unordered-Lists"><a href="#无序列表（加号和嵌套）Unordered-Lists" class="headerlink" title="无序列表（加号和嵌套）Unordered Lists (+)"></a>无序列表（加号和嵌套）Unordered Lists (+)</h4><ul>
-<li>列表一</li>
-<li>列表二<ul>
-<li>列表二-1</li>
-<li>列表二-2</li>
-<li>列表二-3</li>
-</ul>
-</li>
-<li>列表三<ul>
-<li>列表一</li>
-<li>列表二</li>
-<li>列表三</li>
-</ul>
-</li>
-</ul>
-<h4 id="有序列表-Ordered-Lists"><a href="#有序列表-Ordered-Lists" class="headerlink" title="有序列表 Ordered Lists (-)"></a>有序列表 Ordered Lists (-)</h4><ol>
-<li>第一行</li>
-<li>第二行</li>
-<li>第三行</li>
-</ol>
-<h4 id="GFM-task-list"><a href="#GFM-task-list" class="headerlink" title="GFM task list"></a>GFM task list</h4><ul>
-<li><input checked disabled type="checkbox"> GFM task list 1</li>
-<li><input checked disabled type="checkbox"> GFM task list 2</li>
-<li><input disabled type="checkbox"> GFM task list 3<ul>
-<li><input disabled type="checkbox"> GFM task list 3-1</li>
-<li><input disabled type="checkbox"> GFM task list 3-2</li>
-<li><input disabled type="checkbox"> GFM task list 3-3</li>
-</ul>
-</li>
-<li><input disabled type="checkbox"> GFM task list 4<ul>
-<li><input disabled type="checkbox"> GFM task list 4-1</li>
-<li><input disabled type="checkbox"> GFM task list 4-2</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="绘制表格-Tables"><a href="#绘制表格-Tables" class="headerlink" title="绘制表格 Tables"></a>绘制表格 Tables</h3><table>
-<thead>
-<tr>
-<th>项目</th>
-<th align="right">价格</th>
-<th align="center">数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>计算机</td>
-<td align="right">$1600</td>
-<td align="center">5</td>
-</tr>
-<tr>
-<td>手机</td>
-<td align="right">$12</td>
-<td align="center">12</td>
-</tr>
-<tr>
-<td>管线</td>
-<td align="right">$1</td>
-<td align="center">234</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>First Header</th>
-<th>Second Header</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>First Header</th>
-<th>Second Header</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>Function name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>help()</code></td>
-<td>Display the help window.</td>
-</tr>
-<tr>
-<td><code>destroy()</code></td>
-<td><strong>Destroy your computer!</strong></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="left">Left-Aligned</th>
-<th align="center">Center Aligned</th>
-<th align="right">Right Aligned</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">col 3 is</td>
-<td align="center">some wordy text</td>
-<td align="right">$1600</td>
-</tr>
-<tr>
-<td align="left">col 2 is</td>
-<td align="center">centered</td>
-<td align="right">$12</td>
-</tr>
-<tr>
-<td align="left">zebra stripes</td>
-<td align="center">are neat</td>
-<td align="right">$1</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th align="right">Value</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Computer</td>
-<td align="right">$1600</td>
-</tr>
-<tr>
-<td>Phone</td>
-<td align="right">$12</td>
-</tr>
-<tr>
-<td>Pipe</td>
-<td align="right">$1</td>
-</tr>
-</tbody></table>
-<hr>
-<h4 id="特殊符号-HTML-Entities-Codes"><a href="#特殊符号-HTML-Entities-Codes" class="headerlink" title="特殊符号 HTML Entities Codes"></a>特殊符号 HTML Entities Codes</h4><p>&copy; &amp;  &uml; &trade; &iexcl; &pound;<br>&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot;</p>
-<p>X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;</p>
-<p>18&ordm;C  &quot;  &apos;</p>
-<p>[========]</p>
-<h3 id="Emoji表情-smiley"><a href="#Emoji表情-smiley" class="headerlink" title="Emoji表情 :smiley:"></a>Emoji表情 :smiley:</h3><blockquote>
-<p>Blockquotes :star:</p>
-</blockquote>
-<h4 id="GFM-task-lists-amp-Emoji-amp-fontAwesome-icon-emoji-amp-editormd-logo-emoji-editormd-logo-5x"><a href="#GFM-task-lists-amp-Emoji-amp-fontAwesome-icon-emoji-amp-editormd-logo-emoji-editormd-logo-5x" class="headerlink" title="GFM task lists &amp; Emoji &amp; fontAwesome icon emoji &amp; editormd logo emoji :editormd-logo-5x:"></a>GFM task lists &amp; Emoji &amp; fontAwesome icon emoji &amp; editormd logo emoji :editormd-logo-5x:</h4><ul>
-<li><input checked disabled type="checkbox"> :smiley: @mentions, :smiley: #refs, <a href>links</a>, <strong>formatting</strong>, and <del>tags</del> supported :editormd-logo:;</li>
-<li><input checked disabled type="checkbox"> list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;</li>
-<li><input checked disabled type="checkbox"> [ ] :smiley: this is a complete item :smiley:;</li>
-<li><input disabled type="checkbox"> []this is an incomplete item <a href="#">test link</a> :fa-star: @pandao;</li>
-<li><input disabled type="checkbox"> [ ]this is an incomplete item :fa-star: :fa-gear:;<ul>
-<li><input disabled type="checkbox"> :smiley: this is an incomplete item <a href="#">test link</a> :fa-star: :fa-gear:;</li>
-<li><input disabled type="checkbox"> :smiley: this is  :fa-star: :fa-gear: an incomplete item <a href="#">test link</a>;</li>
-</ul>
-</li>
-</ul>
-<h4 id="反斜杠-Escape"><a href="#反斜杠-Escape" class="headerlink" title="反斜杠 Escape"></a>反斜杠 Escape</h4><p>*literal asterisks*</p>
-<p>[========]</p>
-<h3 id="科学公式-TeX-KaTeX"><a href="#科学公式-TeX-KaTeX" class="headerlink" title="科学公式 TeX(KaTeX)"></a>科学公式 TeX(KaTeX)</h3><p>$$E=mc^2$$</p>
-<p>行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。</p>
-<p>$$x &gt; y$$</p>
-<p>$$(\sqrt{3x-1}+(1+x)^2)$$</p>
-<p>$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$</p>
-<p>多行公式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\displaystyle</span><br><span class="line">\left( \sum\_&#123;k=1&#125;^n a\_k b\_k \right)^2</span><br><span class="line">\leq</span><br><span class="line">\left( \sum\_&#123;k=1&#125;^n a\_k^2 \right)</span><br><span class="line">\left( \sum\_&#123;k=1&#125;^n b\_k^2 \right)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\displaystyle</span><br><span class="line">    \frac&#123;1&#125;&#123;</span><br><span class="line">        \Bigl(\sqrt&#123;\phi \sqrt&#123;5&#125;&#125;-\phi\Bigr) e^&#123;</span><br><span class="line">        \frac25 \pi&#125;&#125; = 1+\frac&#123;e^&#123;-2\pi&#125;&#125; &#123;1+\frac&#123;e^&#123;-4\pi&#125;&#125; &#123;</span><br><span class="line">        1+\frac&#123;e^&#123;-6\pi&#125;&#125;</span><br><span class="line">        &#123;1+\frac&#123;e^&#123;-8\pi&#125;&#125;</span><br><span class="line">         &#123;1+\cdots&#125; &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f(x) = \int_&#123;-\infty&#125;^\infty</span><br><span class="line">    \hat f(\xi)\,e^&#123;2 \pi i \xi x&#125;</span><br><span class="line">    \,d\xi</span><br></pre></td></tr></table></figure>
-
-<h3 id="分页符-Page-break"><a href="#分页符-Page-break" class="headerlink" title="分页符 Page break"></a>分页符 Page break</h3><blockquote>
-<p>Print Test: Ctrl + P</p>
-</blockquote>
-<p>[========]</p>
-<h3 id="绘制流程图-Flowchart"><a href="#绘制流程图-Flowchart" class="headerlink" title="绘制流程图 Flowchart"></a>绘制流程图 Flowchart</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 用户登陆</span><br><span class="line">op=&gt;operation: 登陆操作</span><br><span class="line">cond=&gt;condition: 登陆成功 Yes or No?</span><br><span class="line">e=&gt;end: 进入后台</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
-
-<p>[========]</p>
-<h3 id="绘制序列图-Sequence-Diagram"><a href="#绘制序列图-Sequence-Diagram" class="headerlink" title="绘制序列图 Sequence Diagram"></a>绘制序列图 Sequence Diagram</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Andrew-&gt;China: Says Hello</span><br><span class="line">Note right of China: China thinks\nabout it</span><br><span class="line">China--&gt;Andrew: How are you?</span><br><span class="line">Andrew-&gt;&gt;China: I am good thanks!</span><br></pre></td></tr></table></figure>
-
-<h3 id="End"><a href="#End" class="headerlink" title="End"></a>End</h3><p>参考文章：<a href="https://www.mdeditor.com" target="_blank" rel="noopener">https://www.mdeditor.com</a></p>
-
-          
+          Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面，Markdown文件的后缀名便是“.md”
+MarkDown的功能演示标题H1标题H2标题H3标题H4标题
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/25/MarkDown-Syntax-Demo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -927,9 +678,16 @@
       
         
           
-            <h3 id="Why-Deploy-this-Blog"><a href="#Why-Deploy-this-Blog" class="headerlink" title="Why Deploy this Blog"></a>Why Deploy this Blog</h3><p>开设这个Blog主要目的是为了记录在技术漫漫长路上遇到的各种小问题以及解决方法</p>
+          Why Deploy this Blog开设这个Blog主要目的是为了记录在技术漫漫长路上遇到的各种小问题以及解决方法
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/25/My-first-Blog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1120,12 +878,32 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
 
 
@@ -1219,6 +997,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
 
