@@ -10,27 +10,6 @@
       </categories>
   </entry>
   <entry>
-    <title>解决Python运行出现ImportError-No-module-named-some-packages错误的问题</title>
-    <url>/2019/08/25/%E8%A7%A3%E5%86%B3Python%E8%BF%90%E8%A1%8C%E5%87%BA%E7%8E%B0ImportError-No-module-named-some-packages%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>运行Python代码时，在编译时包被正确初始化，也能够被IDE识别，但却在运行时出现错误：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ImportError: No module named <span class="string">''</span>some_package<span class="string">''</span></span><br></pre></td></tr></table></figure>
-
-<p>这时有可能是因为 Python 没有正确将你的包作为 site-packages 导入的原因，解决方法是找到你的site-packages 目录，macOS 下安装的 anaconda 3 目录为：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;Users&#x2F;你的用户名&#x2F;anaconda3&#x2F;lib&#x2F;python3.7&#x2F;site-packages</span><br></pre></td></tr></table></figure>
-
-<p>在其中新建一个 .pth 文件，比如 my_path.pth ，例如在：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;Users&#x2F;lee&#x2F;Library&#x2F;CloudStorage&#x2F;iCloudDrive&#x2F;Documents&#x2F;PyCharmProjects&#x2F;Algorithms&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p>这个项目下存在一个包不能被Python识别，编辑文件内容为你的项目的根目录的位置并保存即可。</p>
-]]></content>
-      <categories>
-        <category>Tips</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MarkDown Syntax Demo</title>
     <url>/2019/08/25/MarkDown-Syntax-Demo/</url>
     <content><![CDATA[<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面，Markdown文件的后缀名便是“.md”</p>
@@ -52,7 +31,7 @@
 <blockquote>
 <p>引用：如果想要插入空白换行<code>即&lt;br /&gt;标签</code>，在插入处先键入两个以上的空格然后回车即可，<a href="https://zer0xpoint.github.io/">普通链接</a>。</p>
 </blockquote>
-<h3 id="锚点与链接-Links"><a href="#锚点与链接-Links" class="headerlink" title="锚点与链接 Links"></a>锚点与链接 Links</h3><p><a href="https://zer0xpoint.github.io/">普通链接</a><br><a href="https://zer0xpoint.github.io/" title="普通链接带标题">普通链接带标题</a><br>直接链接：<a href="https://zer0xpoint.github.io/">https://zer0xpoint.github.io</a><br>[锚点链接][anchor-id]<br>[anchor-id]: <a href="https://zer0xpoint.github.io/">https://zer0xpoint.github.io/</a><br><a href="mailto:test.test@gmail.com">mailto:test.test@gmail.com</a><br>GFM a-tail link @zer0xpoint<br>邮箱地址自动链接 <a href="mailto:&#116;&#x65;&#x73;&#116;&#46;&#x74;&#x65;&#x73;&#116;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#116;&#x65;&#x73;&#116;&#46;&#x74;&#x65;&#x73;&#116;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a>  <a href="mailto:&#x77;&#x77;&#119;&#x40;&#118;&#x69;&#x70;&#46;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;">&#x77;&#x77;&#119;&#x40;&#118;&#x69;&#x70;&#46;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;</a></p>
+<h3 id="锚点与链接-Links"><a href="#锚点与链接-Links" class="headerlink" title="锚点与链接 Links"></a>锚点与链接 Links</h3><p><a href="https://zer0xpoint.github.io/">普通链接</a><br><a href="https://zer0xpoint.github.io/" title="普通链接带标题">普通链接带标题</a><br>直接链接：<a href="https://zer0xpoint.github.io/">https://zer0xpoint.github.io</a><br>[锚点链接][anchor-id]<br>[anchor-id]: <a href="https://zer0xpoint.github.io/">https://zer0xpoint.github.io/</a><br><a href="mailto:test.test@gmail.com">mailto:test.test@gmail.com</a><br>GFM a-tail link @zer0xpoint<br>邮箱地址自动链接 <a href="mailto:&#x74;&#101;&#115;&#116;&#x2e;&#116;&#x65;&#115;&#116;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#x6d;">&#x74;&#101;&#115;&#116;&#x2e;&#116;&#x65;&#115;&#116;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a>  <a href="mailto:&#119;&#x77;&#x77;&#x40;&#118;&#105;&#x70;&#x2e;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;">&#119;&#x77;&#x77;&#x40;&#118;&#105;&#x70;&#x2e;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;</a></p>
 <blockquote>
 <p>@zer0xpoint</p>
 </blockquote>
@@ -288,5 +267,26 @@
       <categories>
         <category>Tech</category>
       </categories>
+  </entry>
+  <entry>
+    <title>解决Python运行出现ImportError-No-module-named-some-packages错误的问题</title>
+    <url>/2019/08/25/%E8%A7%A3%E5%86%B3Python%E8%BF%90%E8%A1%8C%E5%87%BA%E7%8E%B0ImportError-No-module-named-some-packages%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>运行Python代码时，在编译时包被正确初始化，也能够被IDE识别，但却在运行时出现错误：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ImportError: No module named <span class="string">''</span>some_package<span class="string">''</span></span><br></pre></td></tr></table></figure>
+
+<p>这时有可能是因为 Python 没有正确将你的包作为 site-packages 导入的原因，解决方法是找到你的site-packages 目录，macOS 下安装的 anaconda 3 目录为：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;Users&#x2F;你的用户名&#x2F;anaconda3&#x2F;lib&#x2F;python3.7&#x2F;site-packages</span><br></pre></td></tr></table></figure>
+
+<p>在其中新建一个 .pth 文件，比如 my_path.pth ，例如在：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;Users&#x2F;lee&#x2F;Library&#x2F;CloudStorage&#x2F;iCloudDrive&#x2F;Documents&#x2F;PyCharmProjects&#x2F;Algorithms&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>这个项目下存在一个包不能被Python识别，编辑文件内容为你的项目的根目录的位置并保存即可。</p>
+]]></content>
+      <categories>
+        <category>Tips</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
   </entry>
 </search>
